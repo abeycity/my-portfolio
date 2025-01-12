@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.background{
+    background: linear-gradient(to right, #434343 0%, black 100%);
+}
+
+.background-contact{
+    background-image: url(./assets/white-porous-texture.jpg);
+    background-repeat: no-repeat;
+    z-index:99;
+}
+.background-project{
+    background: linear-gradient(to right, #434443 0%, black 80%);
+}
