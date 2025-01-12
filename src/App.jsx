@@ -34,7 +34,7 @@ function App() {
   return (
     <>
         <div className="bg-gray-900 text-white relative flex flex-col gap-16 items-center w-full px-16 overflow-hidden">
-        <nav className="fixed top-[7vh] bg-transparent z-[9999]">
+        <nav className="fixed top-[5vh] bg-transparent z-[9999]">
           <ul className="flex items-center gap-8 border rounded-full border-[#C4C4C4] backdrop-blur backdrop-opacity-100  bg-white/10 px-8 py-4">
             {links.map((link, linkIndex) => (
               <li key={link.path}>
@@ -60,7 +60,7 @@ function App() {
         </nav>
         {/* the begining of  home elemennt */}
         <Element name="home" className="element flex justify-center w-full items-center px-6 py-10 " >
-           <div className="flex flex-col gap-6 mt-[10rem]">
+           <div className="flex flex-col gap-6 mt-[8rem] md:mt-[10rem]">
               <article className="max-w-6xl flex flex-col gap-4 text-center">
                 <h3 className="text-4xl font-roboto">
                  Creating Top-Notch User Experiences, Simple and Enjoyable Interactions for Everyone
@@ -75,55 +75,59 @@ function App() {
               </div>
            </div>
         </Element>
-        <Element name="project" className=" element flex justify-center">
-          <section className="mt-[8rem] ">
-            <div className="flex flex-col items-center gap-4 ">
-                <h1 className="text-4xl font-roboto font-bold text-center">Projects</h1>
-                <p className="text-xl font-inter text-center pb-6">take a sneak peak into my projects</p>
-            </div>
-            <div className="  relative">
-              <ParallaxProvider>
-               <div className=" flex flex-col gap-10 overflow-hidden h-full" >
-                    <div >
-                      <Parallax  translateY={[-10,20]}>
-                        <a href="https://artsy-woad.vercel.app/" rel="noopener noreferrer" target="_blank"  className="background-project px-16 py-4 border-rounded border-2 border-slate-400  flex flex-col gap-4 pb-32">
-                          <img src={artsy} alt="artsy" />
-                          <h2 className="text-4xl font-roboto">Artsy</h2>
-                          <p className="text-2xl font-inter">
-                             Artsy is a digital  marketplace where you can view and buy arts and also    connect with creators. it is made possible with react 
-                          </p>
-                        </a>
-                      </Parallax>
-                    </div>
-                    <div className="overflow-hidden">
-                      <Parallax translateY={[-10,20]} >
-                        <a href="https://novatech-b-xi.vercel.app/"  rel="noopener noreferrer" target="_blank" className="background-project px-16 py-4 border-rounded border-2 border-slate-400  flex flex-col gap-4 pb-32">
-                          <img src={novian} alt="novian"  />
-                          <h2 className="text-4xl font-roboto">Novian</h2>
-                          <p className="text-xl font-inter">An educational website made with next js</p>
-                        </a>
-                      </Parallax>
-                    </div>
-                  </div>
-                </ParallaxProvider>
+      
+          {/*start  of  about   */}
+          <Element name="project" className="element flex justify-center">
+            <section className="mt-[8rem] md:mt-[10rem] ">
+              <div className="flex flex-col items-center gap-4 ">
+                  <h1 className="text-4xl font-roboto font-bold text-center">Projects</h1>
+                  <p className="text-xl font-inter text-center pb-6">take a sneak peak into my projects</p>
               </div>
+              <div className="  relative">
+                <ParallaxProvider>
+                <div className=" flex flex-col gap-10 overflow-hidden h-full" >
+                      <div >
+                        <Parallax  translateY={[-10,20]}>
+                          <a href="https://artsy-woad.vercel.app/" rel="noopener noreferrer" target="_blank"  className="background-project px-6 md:px-16 py-4 border-rounded border-2 border-slate-400  flex flex-col gap-4 pb-6 md:pb-32">
+                            <img src={artsy} alt="artsy" />
+                            <h2 className="text-2xl md:text-4xl font-roboto">Artsy</h2>
+                            <p className=" text-sm md:text-2xl font-inter">
+                              Artsy is a digital  marketplace where you can view and buy arts and also    connect with creators. it is made possible with react 
+                            </p>
+                          </a>
+                        </Parallax>
+                      </div>
+                      <div className="overflow-hidden">
+                        <Parallax translateY={[-10,20]} >
+                          <a href="https://novatech-b-xi.vercel.app/"  rel="noopener noreferrer" target="_blank" className="background-project px-6 md:px-16 py-4 border-rounded border-2 border-slate-400  flex flex-col gap-4 pb-6 md:pb-32">
+                            <img src={novian} alt="novian"  />
+                            <h2 className="text-2xl md:text-4xl font-roboto ">Novian</h2>
+                            <p className="text-sm md:text-xl font-inter">An educational website made with next js</p>
+                          </a>
+                        </Parallax>
+                      </div>
+                    </div>
+                  </ParallaxProvider>
+                </div>
 
-          </section>
-        </Element>
-        <Element name="about" className="element">
-          <div className="mt-[10rem] ">
-            <div className="flex w-full items-center justify-center">            
-                  <h3 className="text-2xl font-roboto text-center pb-10">
-                    Dive a little into my World
-                  </h3>
-            </div>
-            <div className="flex justify-center w-full">
-              <div className="flex flex-col text-left gap-6 max-w-5xl">
-                <section>
-                   <div className="background px-16 py-10 border border-[#c4c4c4] shadow ring-opacity-20  ring-inset rounded-2xl ring   ring-slate-200">
-                      <article className="flex flex-col gap-4">
-                      <h3 className="text-4xl font-roboto font-bold">My toolbox </h3>
-                      <p className="text-md font-inter">Explore the technologies and tools i use to craft  Experiences</p>
+            </section>
+          </Element>
+        {/* estart of project component */}
+        <Element name="about " className=" element flex justify-center">
+           <div className="mt-[8rem] md:[10rem] max-w-6xl">
+             {/* /header of about page  */}
+             <div className="flex w-full items-center justify-center">            
+                    <h3 className="text-2xl font-roboto text-center pb-10">
+                      Dive a little into my World
+                    </h3>
+              </div>
+              {/* end of header  */}
+                {/* start of marquee section */}
+                <section className="flex justify-center ">
+                   <div className="background px-6 md:px-16 py-4 md:py-10 border border-[#c4c4c4] shadow ring-opacity-20  ring-inset rounded-2xl ring   ring-slate-200 overflow-hidden  ">
+                      <article className="flex flex-col lg:item-start items-center px-6 gap-4">
+                      <h3 className="text-2xl md:text-4xl font-roboto font-bold">My toolbox </h3>
+                      <p className="text-sm md:text-md font-inter px-6 max-sm:w-[300px]">Explore the technologies and tools i use to craft  Experiences</p>
                       </article>
                       <div>
                       <Marquee>
@@ -138,51 +142,53 @@ function App() {
                       </div>
                    </div>
                 </section>
-                <p className="text-md font-inter">
-                  My name is <span className="font-ojuju-mi font-bold text-xl">Oloye Ayomide</span>, an Industrial Engineering  student at the University of Benin and an active member of the Google Developer Group,
-                  Uniben Campus. I&apos;m a software Engineering enthusiast with a passion for learning and a vision to develop programs that solve real-world 
-                  problems. I am dedicated to creating high-performance, fast, and secure internet applications, and I continually strive to enhance 
-                  my skills to build even more efficient and secure solutions. One of my challenges is that I tend to learn at a slower pace, 
-                  but I remain committed to delivering my best work and improving every day.
-                </p>
-                <section>
-                  <h3 className="text-2xl font-roboto font-semibold py-4">My hobbies</h3>
-                  <ul className="flex flex-col text-left gap-6 list-disc">
-                    <li>
-                      <h3  className="text-2xl font-roboto py-3">music</h3>
-                      <p className="text-md font-inter">
-                        I&apos;m a great fan of afrobeats, A music genere originated from Nigeria.With my favorite artist  <a href="https://open.spotify.com/artist/0Y3agQaa6g2r0YmHPOO9rh?si=YIrM7WRQQvKLHETICch4bQ" className="font-ojuju-mi font-bold text-2xl"> Davido</a>,
-                        You should check out  <a href="https://open.spotify.com/artist/3wcj11K77LjEY1PkEazffa?si=oqaA1EkZSruWvrMQRMf3Qw" className="font-ojuju-mi font-bold text-2xl"> Burnaboy</a> and <a href="https://open.spotify.com/artist/46pWGuE3dSwY3bMMXGBvVS?si=smR0NBGWTEetAoL7hxoVXw" className="font-ojuju-mi font-bold text-2xl"> Rema</a> they are awesome too.
-                      </p>
-                    </li>
-                    <li>
-                      <h3  className="text-2xl font-roboto py-3">Football</h3> 
-                      <p className="text-md font-inter"> 
-                        I&apos;m a strong fan of manchester united ,one of the oldest club in the world.
-                        One thing i love to set straight in football is a point though you might disagree with me I don&lsquo;t care,
-                        Christiano Ronaldo is the Goat in football period. My favorite current man united player is Ganacho.
-                        plus we are winning a trophy in 2025.
-                      </p>
-                    </li>
-                    <li>
-                      <h3  className="text-2xl font-roboto py-3">Travels and tours</h3>
-                      <p className="text-md font-inter">
-                        I love travelling alot but since i have a limited resources i watch a lot of youtubes on travels and tour.
-                          my favorite travels and tour youtuber is a Nigerian youtuber Tayo Aina
-                      </p>
-                    </li>
-                  </ul>
-                </section>
-              </div>
+                {/*  end of the marquee section */}
+
             </div>
-          </div>
         </Element>
+        <div className="flex flex-col items-start justify-center  px-6">
+                  <p className="text-md font-inter py-10 ">
+                    My name is <span className="font-ojuju-mi font-bold text-xl">Oloye Ayomide</span>, an Industrial Engineering  student at the University of Benin and an active member of the Google Developer Group,
+                    Uniben Campus. I&apos;m a software Engineering enthusiast with a passion for learning and a vision to develop programs that solve real-world 
+                    problems. I am dedicated to creating high-performance, fast, and secure internet applications, and I continually strive to enhance 
+                    my skills to build even more efficient and secure solutions. One of my challenges is that I tend to learn at a slower pace, 
+                    but I remain committed to delivering my best work and improving every day.
+                  </p>
+                  <section>
+                    <h3 className="text-2xl font-roboto font-semibold py-4">My hobbies</h3>
+                    <ul className="flex flex-col text-left gap-6 list-disc">
+                      <li>
+                        <h3  className="text-2xl font-roboto py-3">music</h3>
+                        <p className="text-md font-inter">
+                          I&apos;m a great fan of afrobeats, A music genere originated from Nigeria.With my favorite artist  <a href="https://open.spotify.com/artist/0Y3agQaa6g2r0YmHPOO9rh?si=YIrM7WRQQvKLHETICch4bQ" className="font-ojuju-mi font-bold text-2xl"> Davido</a>,
+                          You should check out  <a href="https://open.spotify.com/artist/3wcj11K77LjEY1PkEazffa?si=oqaA1EkZSruWvrMQRMf3Qw" className="font-ojuju-mi font-bold text-2xl"> Burnaboy</a> and <a href="https://open.spotify.com/artist/46pWGuE3dSwY3bMMXGBvVS?si=smR0NBGWTEetAoL7hxoVXw" className="font-ojuju-mi font-bold text-2xl"> Rema</a> they are awesome too.
+                        </p>
+                      </li>
+                      <li>
+                        <h3  className="text-2xl font-roboto py-3">Football</h3> 
+                        <p className="text-md font-inter"> 
+                          I&apos;m a strong fan of manchester united ,one of the oldest club in the world.
+                          One thing i love to set straight in football is a point though you might disagree with me I don&lsquo;t care,
+                          Christiano Ronaldo is the Goat in football period. My favorite current man united player is Ganacho.
+                          plus we are winning a trophy in 2025.
+                        </p>
+                      </li>
+                      <li>
+                        <h3  className="text-2xl font-roboto py-3">Travels and tours</h3>
+                        <p className="text-md font-inter">
+                          I love travelling alot but since i have a limited resources i watch a lot of youtubes on travels and tour.
+                            my favorite travels and tour youtuber is a Nigerian youtuber Tayo Aina
+                        </p>
+                      </li>
+                    </ul>
+                  </section>
+                </div>
         <Element name="contact" className="element mb-10 ">
            <div className="flex justify-center items-start  mt-[5rem] w-full background-contact rounded-lg ">
-              <div className=" flex justify-between items-center px-16 py-8  w-full bg-[#434343] z-[1] bg-blend-overlay opacity-80">
-                      <div className="w-1/2">
+              <div className=" flex flex-col gap-4 md:flex-row md:justify-between items-start md:items-center px-6 md:px-16 py-4 md:py-8  w-full bg-[#434343] z-[1] bg-blend-overlay opacity-80">
+                      <div className=" md:w-1/2">
                         <article className="text-left flex flex-col gap-6">
-                          <h3 className="text-4xl font-roboto">Let&apos;s connect and build something amazing together</h3>
+                          <h3 className=" text-2xl  md:text-4xl font-roboto">Let&apos;s connect and build something amazing together</h3>
                           <p className="text-md font-inter"> Ready to make your next project a reality? Let&apos;s connect and discuss how I can help you achieve your goals.</p>
                         </article>
                       </div>
