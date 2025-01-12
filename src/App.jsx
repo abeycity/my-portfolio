@@ -113,7 +113,7 @@ function App() {
             </section>
           </Element>
         {/* estart of project component */}
-        <Element name="about " className=" element flex justify-center">
+        <Element name="about" className=" element flex justify-center">
            <div className="mt-[8rem] md:[10rem] max-w-6xl">
              {/* /header of about page  */}
              <div className="flex w-full items-center justify-center">            
