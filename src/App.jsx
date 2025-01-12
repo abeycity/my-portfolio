@@ -177,7 +177,7 @@ function App() {
             </div>
           </div>
         </Element>
-        <Element name="contact" className="element ">
+        <Element name="contact" className="element mb-10 ">
            <div className="flex justify-center items-start  mt-[5rem] w-full background-contact rounded-lg ">
               <div className=" flex justify-between items-center px-16 py-8  w-full bg-[#434343] z-[1] bg-blend-overlay opacity-80">
                       <div className="w-1/2">
